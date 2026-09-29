@@ -7,13 +7,23 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
+	const int row = 3, col = 4;
 
+	int arr[row][col];
+	int sum = 0;
 
+	for (int i = 0; i < row; i++)
+	{
+		sum = 0;
+		for (int j = 0; j < col; j++)
+		{
+			arr[i][j] = rand() % 10;
+			sum += arr[i][j];
+			std::cout << arr[i][j] << " ";
+		}
+		std::cout << "|\t" << sum << "\n";
+	}
 
-	  
-
-	
-	
 	return 0;
 }
 
