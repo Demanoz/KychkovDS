@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="KychkovDS/KychkovDS.vcxproj" Id="097f09b6-e65f-48db-b29c-03f518e22a29" />
+</Solution>
