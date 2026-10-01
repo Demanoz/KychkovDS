@@ -1,13 +1,153 @@
 #include <iostream>
 #include <Windows.h>
 
+/*
+тип_возврата Имя_Функции (агрументы_функции, ...)
+{
+	тело_функции
+}
+*/ 
+
+/*void PrintHellow()
+{
+	int a = 0;
+	std::cout << "Hellow\n";
+}
+
+void PrintNum(int number)
+{
+	number += 100;
+	if (number > 0)
+	{
+		return;
+	}
+
+	std::cout << number << "\n";
+}
+
+int Sum(int one, int two)
+{
+	return 1123;
+}*/
+
+/*double plus(double a, double b)
+{
+	return a + b;
+}
+
+double minys(double a, double b)
+{
+	return a - b;
+}
+
+double ymnog(double a, double b)
+{
+	return a * b;
+}
+
+double delit(double a, double b)
+{
+	return a / b;
+}
+*/
+
+/*double MyPow(double num1, double num2)
+{	
+	double result = num1;
+	for (double i = 1; i < num2; i++)
+	{
+		result = result * num1;
+	}
+	return result;
+}*/
+
+void PrintArr(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		std::cout << name[i] << "";
+	}
+}
+
+void SetArr(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		name[i] = rand() % 6;
+	}
+}
+
+
 int main()
 {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
-	const int row = 3, col = 4;
+	const int size = 5; 
+	int arr[size]{};
+	SetArr(arr, size);
+	PrintArr(arr, size);
+
+
+
+
+/*	double num1 = 0;
+	double num2 = 0;
+
+	std::cout << "Введите число которое вы хотите возвести в степень: ";
+	std::cin >> num1;
+	std::cout << "Введите степень: ";
+	std::cin >> num2;
+	std::cout << "Результат: " << MyPow(num1, num2);*/
+
+	return 0;
+}
+
+/*	int a = Sum(5, 10);
+
+	std::cout << Sum(5, Sum(5, a);*/
+
+/*	double a = 0;
+	double b = 0;
+	char c = 0;
+
+	std::cout << "Введите первое число ";
+	std::cin >> a;
+	std::cout << "Введите знак (-,+,/,*) ";
+	std::cin >> c;
+	std::cout << "Введите второе число ";
+	std::cin >> b;
+
+	if (c == '+')
+	{
+		std::cout << "Сумма: " << plus(a, b);
+	}
+	else if (c == '-')
+	{
+		std::cout << "Разность: " << minys(a, b);
+	}
+	else if (c == '*')
+	{
+		std::cout << "Произведение: " << ymnog(a, b);
+	}
+	else if (c == '/')
+	{
+		if (b != 0)
+		{
+			std::cout << "Частное: ", delit(a, b), "/n";
+		}
+		else
+		{
+			std::cout << "На ноль делить нельзя";
+		}
+	}
+	else
+	{
+		std::cout << "Что-то пошло не так ";
+	}*/
+
+/*	const int row = 3, col = 4;
 
 	int arr[row][col];
 	int sum = 0;
@@ -22,10 +162,7 @@ int main()
 			std::cout << arr[i][j] << " ";
 		}
 		std::cout << "|\t" << sum << "\n";
-	}
-
-	return 0;
-}
+	}*/
 
 /*	int choose = 0, randomNumber = 0, hp = 0, number = 0;
 	int maxHp = 25, maxHpHard = 25, chance = 30;
