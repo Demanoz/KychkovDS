@@ -61,7 +61,7 @@ double delit(double a, double b)
 	return result;
 }*/
 
-void PrintArr(int name[], int lenght)
+/*void PrintArr(int name[], int lenght)
 {
 	for (int i = 0; i < lenght; i++)
 	{
@@ -75,22 +75,115 @@ void SetArr(int name[], int lenght)
 	{
 		name[i] = rand() % 6;
 	}
+}*/
+
+
+/*int Sum(int one, int two)
+{
+	return one + two;
 }
+
+double Sum(double one, double two)
+{
+	return one + two;
+}
+
+double Sum(double one, int two)
+{
+	return one + two;
+}*/
+
+/*int FillArray(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		name[i] = rand() % 8;
+	}
+}
+
+double FillArray(double name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		name[i] = rand() % 8;
+	}
+}
+
+char FillArray(char name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		name[i] = rand() % 8;
+	}
+}
+
+void ShowArray(int name[], int lenght)
+{
+	for (int i = 0; i < lenght; i++)
+	{
+		std::cout << name[i] << " ";
+	}
+}*/
+
+
+/*void PrintArray(double arr[], int size);
+void PrintArray(char arr[], int size);
+
+template <typename T1>
+T1 Dimitry(T1 one, T1 two)
+{
+	return one - two;
+}
+
+
+
+int Fak(int num, int two)
+{
+	if (num 0 and two > 0)
+	{
+		return 0;
+	}
+	if (num == 0)
+	{
+		return 1;
+	}
+	return num * Fak(num - 1);
+}*/
+
+
+int ymn(int one, int two)
+{
+	if (two == 0)
+	{
+		return 0;
+	}
+	return one + ymn(one, two - 1);
+}
+
+
+
 
 
 int main()
 {
+
+/*	Dimitry(3.4, 4.6);
+	Dimitry(3, 4);*/
+
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
 
-	const int size = 5; 
+	std::cout << ymn(3, 4);
+
+
+	return 0;
+}
+
+/*	const int size = 5; 
 	int arr[size]{};
 	SetArr(arr, size);
-	PrintArr(arr, size);
-
-
-
+	PrintArr(arr, size);*/
 
 /*	double num1 = 0;
 	double num2 = 0;
@@ -100,9 +193,6 @@ int main()
 	std::cout << "Введите степень: ";
 	std::cin >> num2;
 	std::cout << "Результат: " << MyPow(num1, num2);*/
-
-	return 0;
-}
 
 /*	int a = Sum(5, 10);
 
