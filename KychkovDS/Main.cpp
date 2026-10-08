@@ -1,6 +1,183 @@
 #include <iostream>
 #include <Windows.h>
 
+
+int main()
+{
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
+	srand(time(NULL));
+
+	double apple = 100, orange = 80, abr = 130, pear = 150;
+	double tomat = 200, onion = 50, cucumber = 55;
+	double garlic = 70, petr = 101; 
+	int choose = 0, Sum = 0, choose_kategory, kolvo = 0;
+
+	while (true)
+	{
+		system("cls");
+		std::cout << "\n\n\n\t\t Магазин \"Соки Севы\"\n\n\n";
+		std::cout << "\n\t Выберите категорию\n\n";
+		std::cout << "1. Фруктовые напитки\n";
+		std::cout << "2. Овощные напитки\n";
+		std::cout << "3. Чаи\n";
+		std::cout << "0. Выход\n\n";
+		std::cout << "Сумма к оплате: " << Sum << "\n";
+		std::cout << "Выберите число: ";
+		std::cin >> choose;
+
+			if (choose == 1)
+				while(true)
+				{
+			{
+				system("cls");
+				std::cout << "\n\n\n\t\t Фруктовые напитки \n\n\n";
+				std::cout << "1 - Яблочный  100р\n";
+				std::cout << "2 - Апельсиновый  80р\n";
+				std::cout << "3 - Абрикосовый  130р\n";
+				std::cout << "4 - Грушевый  150р\n";
+				std::cout << "0 - Выход\n\n";
+				std::cout << "Сумма к оплате: " << Sum << "\n";
+				std::cout << "Выберите число: ";
+				std::cin >> choose_kategory;
+
+				if (choose_kategory == 1)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (apple * kolvo);
+				}
+				else if (choose_kategory == 2)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (orange * kolvo);
+				}
+				else if (choose_kategory == 3)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (abr * kolvo);
+				}
+				else if (choose_kategory == 4)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (pear * kolvo);
+				}
+				else if (choose_kategory == 0)
+				{
+					break;
+				}
+				else
+				{
+					std::cout << "Некорректный ввод, введите повторно: ";
+					std::cin >> choose_kategory;
+				}
+			}
+		}
+
+			if (choose == 2)
+				while (true)
+				{
+			{
+				system("cls");
+				std::cout << "\n\n\n\t\t Овощные напитки \n\n\n";
+				std::cout << "1 - Томатный  200р\n";
+				std::cout << "2 - Луковый  50р\n";
+				std::cout << "3 - Огуречный  55р\n";
+				std::cout << "0 - Выход\n\n";
+				std::cout << "Сумма к оплате: " << Sum << "\n";
+				std::cout << "Выберите число: ";
+				std::cin >> choose_kategory;
+
+				if (choose_kategory == 1)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (tomat * kolvo);
+				}
+				else if (choose_kategory == 2)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (onion * kolvo);
+				}
+				else if (choose_kategory == 3)
+				{
+					std::cout << "Выберите количество товара: ";
+					std::cin >> kolvo;
+					Sum = Sum + (cucumber * kolvo);
+				}
+				else if (choose_kategory == 0)
+				{
+					break;
+				}
+				else
+				{
+					std::cout << "Некорректный ввод";
+					std::cin >> choose_kategory;
+				}
+			}
+		}
+
+
+			if (choose == 3)
+				while (true)
+				{
+					{
+						system("cls");
+						std::cout << "\n\n\n\t\t Чаи \n\n\n";
+						std::cout << "1 - Чесночный  70р\n";
+						std::cout << "2 - Петрушевый 101р\n";
+						std::cout << "0 - Выход\n\n";
+						std::cout << "Сумма к оплате: " << Sum << "\n";
+						std::cout << "Выберите число: ";
+						std::cin >> choose_kategory;
+
+						if (choose_kategory == 1)
+						{
+							std::cout << "Выберите количество товара: ";
+							std::cin >> kolvo;
+							Sum = Sum + (onion * kolvo);
+						}
+						else if (choose_kategory == 2)
+						{
+							std::cout << "Выберите количество товара: ";
+							std::cin >> kolvo;
+							Sum = Sum + (petr * kolvo);
+						}
+						else if (choose_kategory == 0)
+						{
+							break;
+						}
+						else
+						{
+							std::cout << "Некорректный ввод";
+							std::cin >> choose_kategory;
+						}
+					}
+				}
+
+			if (choose == 0)
+			{
+				std::cout << "Спасибо за посещение нашего магазина!";
+				Sleep(1500);
+				system("cls");
+				break;
+			}
+	}
+
+
+	
+		
+
+	return 0;
+}
+
+
+
+
 /*
 тип_возврата Имя_Функции (агрументы_функции, ...)
 {
@@ -77,7 +254,6 @@ void SetArr(int name[], int lenght)
 	}
 }*/
 
-
 /*int Sum(int one, int two)
 {
 	return one + two;
@@ -125,7 +301,6 @@ void ShowArray(int name[], int lenght)
 	}
 }*/
 
-
 /*void PrintArray(double arr[], int size);
 void PrintArray(char arr[], int size);
 
@@ -150,35 +325,17 @@ int Fak(int num, int two)
 	return num * Fak(num - 1);
 }*/
 
-
-int ymn(int one, int two)
+/*int ymn(int one, int two)
 {
 	if (two == 0)
 	{
 		return 0;
 	}
 	return one + ymn(one, two - 1);
-}
-
-
-
-
-
-int main()
-{
+}*/
 
 /*	Dimitry(3.4, 4.6);
 	Dimitry(3, 4);*/
-
-	SetConsoleCP(CP_UTF8);
-	SetConsoleOutputCP(CP_UTF8);
-	srand(time(NULL));
-
-	std::cout << ymn(3, 4);
-
-
-	return 0;
-}
 
 /*	const int size = 5; 
 	int arr[size]{};
